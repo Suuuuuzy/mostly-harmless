@@ -1,1 +1,1 @@
-id
+touch /tmp/pwn
